@@ -1,0 +1,21 @@
+
+
+School project
+
+
+localhost:4200/home     -- home
+HOme page
+
+localhost:4200/history  -- url
+History page
+
+localhost:4200/details   -- details
+Detailspage
+
+
+
+https://firstamedu.com/user/notify
+registrationpage
+
+https://firstamedu.com/user/class/fullCatalog
+fullCatalog
