@@ -1,0 +1,32 @@
+<div style="margin-top:50px ; padding: 20px;">
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Location
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of schoolList">
+                <td>{{item.ID}}</td>
+                <td>{{item.Name}}</td>
+                <td>{{item.Location}}</td>
+                <!-- <td><a routerLink="/schooldetails">...More</a></td> -->
+                <!-- <td><a 
+                    [routerLink]="['/schooldetails',item.Name]">
+                    ...More</a></td> -->
+
+                    <td><a style="color:blue;cursor: pointer;" (click)="evtNavigation(item.Name)">
+                        ...More</a></td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
