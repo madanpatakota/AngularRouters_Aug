@@ -33,7 +33,20 @@ export class SchoolComponent implements OnInit {
   evtNavigation(ID:string){
     //  in coding part we are doing
     // localhost:4200/schooldetails
-     this.router.navigate(["/schooldetails",ID] , { relativeTo: this.activateroute});
-  }
+     //this.router.navigate(["/schooldetails",ID] , { relativeTo: this.activateroute});
+    //  this.router.navigate(["schooldetails"] , 
+    //                         {
+    //                            queryParams: {SID:ID}, 
+    //                            relativeTo: this.activateroute
+    //                         });
+
+         this.router.navigate(["schooldetails"] , 
+                            {
+                               fragment: ID, 
+                               relativeTo: this.activateroute
+                            });
+
+  
+    }
 
 }

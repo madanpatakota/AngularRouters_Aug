@@ -1,48 +1,67 @@
-<div style="margin-top:50px ; padding: 20px;">
-<table class="table table-bordered">
+<div style="margin-top: 50px; padding: 20px">
+  <table class="table table-bordered">
     <thead>
-        <tr>
-            <th>
-                ID
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Location
-            </th>
-        </tr>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of schoolList">
-                <td>{{item.ID}}</td>
-                <td>{{item.Name}}</td>
-                <td>{{item.Location}}</td>
+      <tr *ngFor="let item of schoolList">
+        <td>{{ item.ID }}</td>
+        <td>{{ item.Name }}</td>
+        <td>{{ item.Location }}</td>
+        <td>
+            <a style="color: blue; cursor: pointer" (click)="evtNavigation(item.ID)" >
+                ...More
+               </a>
+        </td>
 
-                <!-- /schooldetails -->
+        <!-- /schooldetails -->
 
-                <!-- //localhost:4200/main/pageA -->   
-                <!-- .... more -->
-                <!-- localhost:4200/main/pageA/schooldetails -->
-                <!-- <td><a routerLink="/schooldetails">...More</a></td> -->
-                <!-- //localhost:4200/schooldetails -->   
+        <!-- localhost:4200/school/4 -->
 
-                <!-- school/schooldetails/ -->
-                <!-- <td><a style="color:red" 
+        <!-- //localhost:4200/main/pageA -->
+        <!-- .... more -->
+        <!-- localhost:4200/main/pageA/schooldetails -->
+        <!-- <td><a routerLink="/schooldetails">...More</a></td> -->
+        <!-- //localhost:4200/schooldetails -->
+
+        <!-- school/schooldetails/ -->
+        <!-- <td><a style="color:red" 
                     [routerLink]="['schooldetails',item.Name]">
                     ...More1</a></td> -->
-                    <!-- http://localhost:4200/school/schooldetails/Kidzee -->
-<!-- 
+        <!-- http://localhost:4200/school/schooldetails/Kidzee -->
+        <!-- 
                     <td><a  [routerLink]="['/schooldetails',item.Name]">
                         ...More2</a></td> -->
-                    <!-- http://localhost:4200/schooldetails/Kidzee -->
-                    
+        <!-- http://localhost:4200/schooldetails/Kidzee -->
 
-                <!-- <td><a style="color:blue;cursor: pointer;" 
-                        (click)="evtNavigation(item.ID)">
+        <!-- http://localhost:4200/schooldetails/School-1 -->
+        <!-- <td><a style="color:blue;cursor: pointer;"  
+                    [routerLink]="['schooldetails',item.ID]">
                         ...More</a></td> -->
-            
-        </tr>
+
+        <!-- <td>
+          <a
+            style="color: blue; cursor: pointer"
+            [routerLink]="['schooldetails']"
+            [queryParams]="{'SID':item.ID}"
+          >
+            ...More</a
+          >
+        </td> -->
+        <!-- <td>
+         <a
+            style="color: blue; cursor: pointer"
+            [routerLink]="['schooldetails']"
+            [fragment]="item.ID"
+          >
+            ...More</a
+          >
+        </td> -->
+      </tr>
     </tbody>
-</table>
+  </table>
 </div>

@@ -26,13 +26,48 @@ export class SchoolDetailsComponent implements OnInit {
 
   // subscripion of your youtube subscribe
 
+  schoolDetails:any = [];
+
+
+  // schooldetails ----> params queryparamas fragment
+
+  //  prime subscription 
+
+  //  hotstar  
+
+  // i will receive the notification
+
+  // http://localhost:4200/school/schooldetails?SID=School-1
   ngOnInit(): void {
-    this.activateRoute.params.subscribe((param: any) => {
+    // this.activateRoute.params.subscribe((param: any) => {
+    //   console.log(param);
+    //   let output =  this.scoolService.schoolsDetails.filter(
+    //     (record) => record.SchoolID === param.ID
+    //   );
+    //   console.log(output);
+    // });
+
+    // this.activateRoute.queryParams.subscribe((param: any) => {
+    //   console.log(param);
+    //   let output =  this.scoolService.schoolsDetails.filter(
+    //     (record) => record.SchoolID === param.SID
+    //   );
+    //   console.log(output);
+    //   this.schoolDetails = output;
+    // });
+
+    this.activateRoute.fragment.subscribe((param: any) => {
       console.log(param);
+      // schooldetails data
       let output =  this.scoolService.schoolsDetails.filter(
-        (record) => record.SchoolID === param.ID
+        (record) => record.SchoolID === param
       );
       console.log(output);
+      this.schoolDetails = output;
     });
+
+
+
+
   }
 }
