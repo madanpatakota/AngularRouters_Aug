@@ -18,13 +18,29 @@
                 <td>{{item.ID}}</td>
                 <td>{{item.Name}}</td>
                 <td>{{item.Location}}</td>
-                <!-- <td><a routerLink="/schooldetails">...More</a></td> -->
-                <!-- <td><a 
-                    [routerLink]="['/schooldetails',item.Name]">
-                    ...More</a></td> -->
 
-                    <td><a style="color:blue;cursor: pointer;" (click)="evtNavigation(item.Name)">
-                        ...More</a></td>
+                <!-- /schooldetails -->
+
+                <!-- //localhost:4200/main/pageA -->   
+                <!-- .... more -->
+                <!-- localhost:4200/main/pageA/schooldetails -->
+                <!-- <td><a routerLink="/schooldetails">...More</a></td> -->
+                <!-- //localhost:4200/schooldetails -->   
+
+                <!-- school/schooldetails/ -->
+                <!-- <td><a style="color:red" 
+                    [routerLink]="['schooldetails',item.Name]">
+                    ...More1</a></td> -->
+                    <!-- http://localhost:4200/school/schooldetails/Kidzee -->
+<!-- 
+                    <td><a  [routerLink]="['/schooldetails',item.Name]">
+                        ...More2</a></td> -->
+                    <!-- http://localhost:4200/schooldetails/Kidzee -->
+                    
+
+                <!-- <td><a style="color:blue;cursor: pointer;" 
+                        (click)="evtNavigation(item.ID)">
+                        ...More</a></td> -->
             
         </tr>
     </tbody>

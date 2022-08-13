@@ -30,8 +30,11 @@ localhost:4200
 
 const appRoutes:Routes =  [
     { path:  'school' , component:SchoolComponent },
-    { path : 'schooldetails/:Name' , component:SchoolDetailsComponent}
+    { path : 'schooldetails/:ID' , component:SchoolDetailsComponent},
+    { path : 'school/schooldetails/:ID' , component:SchoolDetailsComponent}
  ]
+
+//  school/schooldetails/Kidzee'
 
 
 

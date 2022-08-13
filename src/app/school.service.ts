@@ -19,4 +19,10 @@ export class SchoolService{
           ID: 'School-3',
         },
       ];
+
+    schoolsDetails = [ 
+        {SchoolID:'School-1', PrinicipleName:"NarayanaMoorthy" , studentsCount : 200 , EstablishDate: 1990} ,
+        {SchoolID:'School-2', PrinicipleName:"Ramachandrudu" , studentsCount : 210 , EstablishDate: 2000},
+        {SchoolID:'School-3', PrinicipleName:"Prathapudu" , studentsCount : 180 , EstablishDate: 1995}
+      ];
 }

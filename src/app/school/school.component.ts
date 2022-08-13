@@ -18,8 +18,22 @@ export class SchoolComponent implements OnInit {
     this.schoolList = this.schoolService.schoolsList;
   }
 
-  evtNavigation(Name:string){
-     this.router.navigate(["schooldetails",Name]);
+
+  // in html
+  // <td><a  [routerLink]="['/schooldetails',item.Name]">
+  // ...More</a></td>
+
+  // /relatepath
+
+
+  // how to set the relative path in program
+  //this.router.navigate(["/schooldetails",ID] , { relativeTo: this.activateroute});
+
+
+  evtNavigation(ID:string){
+    //  in coding part we are doing
+    // localhost:4200/schooldetails
+     this.router.navigate(["/schooldetails",ID] , { relativeTo: this.activateroute});
   }
 
 }
