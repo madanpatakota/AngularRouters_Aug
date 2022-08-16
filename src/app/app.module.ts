@@ -9,6 +9,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { SchoolComponent } from './school/school.component';
 import { SchoolDetailsComponent } from './school/school-details/school-details.component';
+import { SchoolResolver } from './school.resolver';
+import { SchoolCanActivateGuard } from './school-can-activate.guard';
 
 
 // localhost:4200/home     -- home
@@ -29,8 +31,13 @@ import { SchoolDetailsComponent } from './school/school-details/school-details.c
 localhost:4200
 
 const appRoutes:Routes =  [
-    { path:  'school' , component:SchoolComponent },
-    { path : 'schooldetails/:Name' , component:SchoolDetailsComponent},
+    { 
+      path:  'school' ,
+      component:SchoolComponent  ,
+      resolve: [SchoolResolver] ,
+      canActivate : [SchoolCanActivateGuard] 
+    },
+    { path : 'schooldetails/:Name' , data:["Hello world"] , component:SchoolDetailsComponent},
     { path : 'school/schooldetails' , component:SchoolDetailsComponent}
 
     // { path : 'school/schooldetails/:ID' , component:SchoolDetailsComponent}
@@ -48,7 +55,7 @@ const appRoutes:Routes =  [
     HistoryComponent,
     NotfoundComponent,
     SchoolComponent,
-    SchoolDetailsComponent
+    SchoolDetailsComponent,
   ],
   imports: [
     BrowserModule,

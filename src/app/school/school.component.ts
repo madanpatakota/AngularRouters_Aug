@@ -16,6 +16,22 @@ export class SchoolComponent implements OnInit {
   schoolList:any = [];
   ngOnInit(): void {
     this.schoolList = this.schoolService.schoolsList;
+
+    console.log(this);
+    console.log(this.activateroute)
+    console.log(this.activateroute.data);
+
+    this.activateroute.data.subscribe((data)=>{
+      console.log("From the router" ,data);
+    })
+
+    //this.activateroute.data
+
+    // this.activateroute.data.subscribe((data)=>{
+    //   console.log(data);
+    // })
+
+
   }
 
 
