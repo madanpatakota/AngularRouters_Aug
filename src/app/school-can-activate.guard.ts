@@ -15,7 +15,7 @@ export class SchoolCanActivateGuard implements CanActivate {
                             // and then we will fetch the that data from the brosers.
      // let password = "ang@123";
 
-      if(EmpID == "619410"){
+      if(EmpID == "619409"){
         return true;
       }
       else{

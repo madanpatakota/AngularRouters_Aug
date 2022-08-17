@@ -11,6 +11,8 @@ import { SchoolComponent } from './school/school.component';
 import { SchoolDetailsComponent } from './school/school-details/school-details.component';
 import { SchoolResolver } from './school.resolver';
 import { SchoolCanActivateGuard } from './school-can-activate.guard';
+import { SchoolDeActivateGuard } from './school-de-activate.guard';
+import { CanChildrenActivateGuard } from './can-children-activate.guard';
 
 
 // localhost:4200/home     -- home
@@ -35,11 +37,18 @@ const appRoutes:Routes =  [
       path:  'school' ,
       component:SchoolComponent  ,
       resolve: [SchoolResolver] ,
-      canActivate : [SchoolCanActivateGuard] 
+      canActivate : [SchoolCanActivateGuard],
+      canDeactivate:[SchoolDeActivateGuard],
+      canActivateChild:[CanChildrenActivateGuard],
+      children:[{
+        path : 'schooldetails' , 
+        component:SchoolDetailsComponent
+      }]
     },
-    { path : 'schooldetails/:Name' , data:["Hello world"] , component:SchoolDetailsComponent},
-    { path : 'school/schooldetails' , component:SchoolDetailsComponent}
+    
+   
 
+    // { path : 'schooldetails/:Name' , data:["Hello world"] , component:SchoolDetailsComponent},
     // { path : 'school/schooldetails/:ID' , component:SchoolDetailsComponent}
  
   ]
